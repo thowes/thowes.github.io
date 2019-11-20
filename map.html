@@ -18,9 +18,9 @@
   </style>
  </head>
  <body>
-<div id="loc"></div>
+<div id="demo"></div>
 <script>
-var x = document.getElementById("loc");
+var x = document.getElementById("demo");
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -31,7 +31,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  x.innerHTML = "<p>" + position.coords.longitude + ", " + position.coords.latitude + "</p>";
+  x.innerHTML = "<p>Latitude (φ)" + position.coords.latitude + ", Longitude (λ)" + position.coords.longitude + "</p>";
 }
 getLocation();
 </script>
