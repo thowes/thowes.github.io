@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+   body {
+    background-image:url('bg/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial;
+    text-align: center;
+   }
+   h1 {
+    color: ivory;
+    font-size: 4em;
+   }
+   p {
+    color: grey;
+    font-size: 3em;
+   }
+  </style>
+  <title>HOME</title>
+ </head>
+ <body>
+<div id="loc"></div>
+<script>
+var x = document.getElementById("loc");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "<h1>Coordinates:</h1><p>" + position.coords"</p>";
+}
+getLocation();
+</script>
+ </p>
+ </body>
+</html>
+
