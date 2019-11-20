@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style type="text/css">
    body {
-    background-color: ivory;
+    background-color: grey;
     background-image:url('bg/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,9 +20,9 @@
     font-size: 3em;
    }
   </style>
-  <title>HOME</title>
  </head>
  <body>
+<h1>Coordinates:</h1>
 <div id="loc"></div>
 <script>
 var x = document.getElementById("loc");
@@ -36,11 +36,10 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  x.innerHTML = "<h1>Coordinates:</h1><p>" + position.coords"</p>";
+  x.innerHTML = "<p>" + position.coords + "</p>";
 }
 getLocation();
 </script>
- </p>
  </body>
 </html>
 
